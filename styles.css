@@ -4,4 +4,94 @@
 
 body {
   margin: 0;
+ // background-color: #E5E5E5;
+}
+
+
+
+.people {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 500px;
+  margin: auto;
+}
+.person {
+  flex: 0 0 auto;
+   width: 200px;
+   position: relative;
+   
+   
+}
+
+.person:hover {
+  background-color: #E5E5E5;
+ }
+
+@keyframes size {
+  from {width: 200px; border-radius: 50%;}
+  to {width: 230px; border-radius: 25%;}
+  }
+
+.person:hover .person__extra {
+      display: block;
+  }
+
+.number {
+  position: absolute;
+  top: 33%;
+  right: 60px;
+  width: 27px;
+  height: 27px;
+  border-radius: 50%;
+  background-color: #E5E5E5;
+  text-align: center;
+  padding-top: 5px;
+}
+
+.person__photo {
+  width: 200px;
+  margin: 10px auto;
+}
+.person__img {
+  border-radius: 50%;
+  width: 200px;
+    }
+
+ .person__img:hover {
+  animation: size  2s  ease-in-out;
+  animation-fill-mode: forwards;
+ }   
+
+.person__img:hover {
+  border: 9px solid blue;
+} 
+
+.person__details {
+  width: 200px;
+  text-align: center;
+}
+
+.person__name:hover {
+  text-decoration: underline;
+  text-decoration-color: blue;
+  }
+
+.person__extra {
+  display: none;
+}
+
+@media (min-width: 1000px) {
+  .person {
+    flex: 0 0 25%;
+    // width: 200px;
+    }
+
+ .person:last-child {
+   margin-right: 500px;
+ }
+
+  .people {
+    width: 1000px;
+    }
 }
